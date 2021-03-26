@@ -26,7 +26,7 @@ class AtividadeTest {
         assertEquals(1,turma.getCodigo());
         assertNotNull(disciplina.getTurma(1));
 
-        discriplina.criarTurma(2);
+        disciplina.criarTurma(2);
         assertNotNull(disciplina.getTurma(2));
 
 
@@ -43,12 +43,12 @@ class AtividadeTest {
         turma1.setProfessor(new Professor("Joao"));
         assertEquals("Joao",turma1.getProfessor().getNome());
 
-        assertNull(turma.getAluno(222));
+        assertNull(turma1.getAluno(222));
 
-        turma.addAluno(new Aluno(2134,"Maria"));
-        assertNotNull(turma.getAluno(2134));
-        assertEquals("Maria",turma.getAluno(2134).getNome());
-        turma.addAluno(new Aluno(324,"Jose"));
+        turma1.addAluno(new Aluno(2134,"Maria"));
+        assertNotNull(turma1.getAluno(2134));
+        assertEquals("Maria",turma1.getAluno(2134).getNome());
+        turma1.addAluno(new Aluno(324,"Jose"));
 
     }
 
